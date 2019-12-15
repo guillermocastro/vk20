@@ -1,0 +1,20 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    @if (User.Identity.IsAuthenticated)
+    {
+        <h1>Welcome @User.Identity.Name</h1>
+    }
+    else
+    {
+        <h1 class="display-4">Welcome @User.Identity.Name</h1>
+        <p>This is the personal Web Site of G. C. de la Puente</p>
+        <p>This site is accessible only under invitation.</p>
+        <p>If you like to contact me, please do it through my <a href="https://www.linkedin.com/in/data-scientist/">Linkedin profile.</a></p>
+        <img src="~/img/WP_20140618_002.jpg" alt="G. Castro" />
+    }
+</div>
